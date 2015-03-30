@@ -17,7 +17,7 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 	once.Do(func(){
 		// load templates or something
 	})
-	// TODO: repsond
+	// TODO: respond
 }
 
 // handle some request that indicates things have changed
