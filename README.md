@@ -6,10 +6,13 @@
 
 ## Example
 
+The following example examines how `resync.Once` could be used in a HTTP server situation.
+
 ```
 // use it just like sync.Once
 var once resync.Once
 
+// handle a web request
 func handleRequest(w http.ResponseWriter, r *http.Request) {
 	once.Do(func(){
 		// load templates or something
@@ -17,6 +20,7 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 	// TODO: repsond
 }
 
+// handle some request that indicates things have changed
 func handleResetRequest(w http.ResponseWriter, r *http.Request) {
 	once.Reset() // call Reset to cause initialisation to happen again above
 }
