@@ -7,7 +7,7 @@
 ## Example
 
 ```
-// make a resync.Once
+// use it just like sync.Once
 var once resync.Once
 
 func handleRequest(w http.ResponseWriter, r *http.Request) {
@@ -18,6 +18,6 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleResetRequest(w http.ResponseWriter, r *http.Request) {
-	once.Reset()
+	once.Reset() // call Reset to cause initialisation to happen again above
 }
 ```
