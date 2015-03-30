@@ -30,7 +30,7 @@ func (o *Once) Do(f func()) {
 }
 
 // Reset indicates that the next call to Do should actually be called
-// once.
+// once again.
 func (o *Once) Reset() {
 	o.m.Lock()
 	defer o.m.Unlock()
