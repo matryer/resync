@@ -8,7 +8,7 @@
 
 The following example examines how `resync.Once` could be used in a HTTP server situation.
 
-```
+```go
 // use it just like sync.Once
 var once resync.Once
 
